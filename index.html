@@ -36,10 +36,23 @@
     button:hover {
       background-color: #128C7E;
     }
-    p {
+    .payment-message {
       margin-top: 30px;
+      padding: 15px;
+      background-color: #e6f0ff;
+      border: 2px solid #3399ff;
+      border-radius: 8px;
+    }
+    .payment-message p {
+      color: #0044cc;
+      margin: 5px 0;
+    }
+    .payment-message .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .payment-message .details {
       font-size: 16px;
-      color: blue; /* Message in blue color */
     }
   </style>
 </head>
@@ -58,10 +71,14 @@
   <!-- Submit Button -->
   <button onclick="sendUTR()">Submit</button>
 
-  <!-- Custom Message -->
-  Service ko activate karne ke liye sirf ₹599 ka payment karein aur apna <strong>UTR number</strong> niche box me dalen.  
-    💳 Jaldi karein aur apna account turant live karein!
-  
+  <!-- Attractive Payment Message -->
+  <div class="payment-message">
+    <p class="title">🎉 Apni Service turant activate karein!</p>
+    <p class="details">
+      Service ko activate karne ke liye sirf ₹599 ka payment karein aur apna <strong>UTR number</strong> niche box me dalen.<br>
+      💳 Jaldi karein aur apna account turant live karein!
+    </p>
+  </div>
 
   <script>
     function sendUTR() {
