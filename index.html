@@ -36,6 +36,11 @@
     button:hover {
       background-color: #128C7E;
     }
+    p {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -52,6 +57,9 @@
 
   <!-- Submit Button -->
   <button onclick="sendUTR()">Submit</button>
+
+  <!-- Custom Message -->
+  <p>ID kyon active karne ke liye kripya ₹599 ka payment karein aur UTR number is box mein dalen.</p>
 
   <script>
     function sendUTR() {
@@ -70,10 +78,10 @@
       // Open WhatsApp link in new tab
       window.open(url, "_blank");
 
-      // 5 minutes = 300000 milliseconds
+      // 15 seconds = 15000 milliseconds
       setTimeout(function(){
         window.location.href = "https://www.vlefastprint.in/register.php?ref=NzMxODQzMjAyOA==";
-      }, 300000);
+      }, 15000);
     }
   </script>
 
