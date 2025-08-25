@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR UTR Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #25D366;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Scan QR & Submit UTR</h2>
+  
+  <!-- QR Code -->
+  <img src="YOUR_QR_CODE_IMAGE_URL_HERE" alt="QR Code">
+
+  <!-- UTR Input -->
+  <div>
+    <input type="text" id="utrNumber" placeholder="Enter UTR number / Mobile number">
+  </div>
+
+  <!-- Submit Button -->
+  <button onclick="sendUTR()">Submit</button>
+
+  <script>
+    function sendUTR() {
+      var utr = document.getElementById("utrNumber").value.trim();
+      if(utr === "") {
+        alert("Please enter your UTR number!");
+        return;
+      }
+
+      // WhatsApp number
+      var whatsappNumber = "917318432028"; 
+
+      // WhatsApp URL
+      var url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("UTR/UPI Number: " + utr + "\nUPI ID: mab0450552a0265015@yesbank");
+      
+      // Open WhatsApp link in new tab
+      window.open(url, "_blank");
+
+      // 5 minutes = 300000 milliseconds
+      setTimeout(function(){
+        window.location.href = "https://www.vlefastprint.in/register.php?ref=NzMxODQzMjAyOA==";
+      }, 300000);
+    }
+  </script>
+
+</body>
+</html>
